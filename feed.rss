@@ -2,9 +2,41 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Command Line Erico</title><link>http://ericoporto.github.io/bashblog/index.html</link>
 <description>This is where I post things, from command line</description><language>en</language>
-<lastBuildDate>Mon, 29 Feb 2016 21:04:31 -0300</lastBuildDate>
-<pubDate>Mon, 29 Feb 2016 21:04:31 -0300</pubDate>
+<lastBuildDate>Tue, 01 Mar 2016 19:50:08 -0300</lastBuildDate>
+<pubDate>Tue, 01 Mar 2016 19:50:08 -0300</pubDate>
 <atom:link href="http://ericoporto.github.io/bashblog/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Cool Command Line Tools
+</title><description><![CDATA[
+
+<p>So today I want to talk about the cool command line tools available today to make
+your life living in the terminal easier!</p>
+
+<h2>Nano</h2>
+
+<p>This is old, but if you need a fast and quick text editor for not too long texts, this is 
+what you want. For short texts, this is it!</p>
+
+<h2>Slap Editor</h2>
+
+<p>If you need to edit code, this is the closest to Sublime Text / Atom you will get on terminal.</p>
+
+<p>It requires nodejs and npm installed. But having then and a internet connection will lead us
+to the next one in this list...</p>
+
+<h2>how2</h2>
+
+<p>How2 is Google+Stackoverflow without needing to leave the confy place that is the terminal. 
+It's really good for finding help using intuitive commands.</p>
+
+<p>And that's it for today!</p>
+
+<p>Tags: <a href='tag_command-line-tools.html'>command-line-tools</a></p>
+<!-- text end -->
+]]></description><link>http://ericoporto.github.io/bashblog/cool-command-line-tools.html</link>
+<guid>http://ericoporto.github.io/bashblog/./cool-command-line-tools.html</guid>
+<dc:creator>Erico Porto</dc:creator>
+<pubDate>Tue, 01 Mar 2016 19:50:05 -0300</pubDate></item>
 <item><title>
 Hello World
 </title><description><![CDATA[
