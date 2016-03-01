@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
+<channel><title>Command Line Erico</title><link>http://ericoporto.github.io/bashblog/index.html</link>
+<description>This is where I post things, from command line</description><language>en</language>
+<lastBuildDate>Mon, 29 Feb 2016 21:04:31 -0300</lastBuildDate>
+<pubDate>Mon, 29 Feb 2016 21:04:31 -0300</pubDate>
+<atom:link href="http://ericoporto.github.io/bashblog/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+Hello World
+</title><description><![CDATA[
+
+<p>This is a test post, the first post from the <strong>bashblog</strong> script!</p>
+
+<p>Tags: <a href='tag_hello-world.html'>hello-world</a></p>
+<!-- text end -->
+]]></description><link>http://ericoporto.github.io/bashblog/hello-world.html</link>
+<guid>http://ericoporto.github.io/bashblog/./hello-world.html</guid>
+<dc:creator>Erico Porto</dc:creator>
+<pubDate>Mon, 29 Feb 2016 21:04:28 -0300</pubDate></item>
+</channel></rss>
