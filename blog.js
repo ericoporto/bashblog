@@ -1,1 +1,1 @@
-$.backstretch("http://i.imgur.com/FNdtzl3.jpg")
+$.backstretch("http://ericoporto.github.io/bashblog/bg.jpg")
