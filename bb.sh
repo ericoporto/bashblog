@@ -904,7 +904,7 @@ create_includes() {
         echo '<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>'
         echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>'
         echo '<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel ="stylesheet" type="text/css">'
-        echo '<script src="blog.js"></script>'
+        echo '<script src="http://ericoporto.github.io/bashblog/blog.js"></script>'
         printf '<link rel="stylesheet" href="%s" type="text/css" />\n' "${css_include[@]}"
         if [[ -z $global_feedburner ]]; then
             echo "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"$template_subscribe_browser_button\" href=\"$blog_feed\" />"

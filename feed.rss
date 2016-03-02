@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Command Line Erico</title><link>http://ericoporto.github.io/bashblog/index.html</link>
 <description>This is where I post things, from command line</description><language>en</language>
-<lastBuildDate>Tue, 01 Mar 2016 22:13:57 -0300</lastBuildDate>
-<pubDate>Tue, 01 Mar 2016 22:13:57 -0300</pubDate>
+<lastBuildDate>Tue, 01 Mar 2016 22:17:34 -0300</lastBuildDate>
+<pubDate>Tue, 01 Mar 2016 22:17:34 -0300</pubDate>
 <atom:link href="http://ericoporto.github.io/bashblog/feed.rss" rel="self" type="application/rss+xml" />
 <item><title>
 Cool Command Line Tools
@@ -35,6 +35,7 @@ It's really good for finding help using intuitive commands.</p>
 
 
 
+
 <!-- text end -->
 ]]></description><link>http://ericoporto.github.io/bashblog/cool-command-line-tools.html</link>
 <guid>http://ericoporto.github.io/bashblog/./cool-command-line-tools.html</guid>
@@ -47,6 +48,7 @@ Hello World
 <p>This is a test post, the first post from the <strong>bashblog</strong> script!</p>
 
 <p>Tags: <a href='tag_hello-world.html'>hello-world</a></p>
+
 
 
 
