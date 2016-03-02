@@ -890,7 +890,7 @@ make_rss() {
 # generate headers, footers, etc
 create_includes() {
     {
-        echo "<h1 class=\"nomargin\"><a class=\"ablack\" href=\"$global_url/$index_file\">$global_title</a></h1>" 
+        echo "<h1 class=\"nomargin icon-logo\"><a class=\"ablack\" href=\"$global_url/$index_file\">$global_title</a></h1>" 
         echo "<div id=\"description\">$global_description</div>"
     } > ".title.html"
 
@@ -949,7 +949,12 @@ create_css() {
         #description{font-size:large;margin-bottom:12px; font-family: "Arvo", serif;}
         h3{margin-top:42px;margin-bottom:8px;}
         h4{margin-left:24px;margin-right:24px;}
-        #twitter{line-height:20px;vertical-align:top;text-align:right;font-style:italic;color:#333;margin-top:24px;font-size:14px;}' > blog.css
+        #twitter{line-height:20px;vertical-align:top;text-align:right;font-style:italic;color:#333;margin-top:24px;font-size:14px;}
+        .icon-logo {
+             background: url("/bashblog/icon.svg") no repeat;
+             background-size: 1em 1em;
+             padding-left: 2em;
+        }' > blog.css
     fi
 
     # If there is a style.css from the parent page (i.e. some landing page)

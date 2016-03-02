@@ -10,3 +10,8 @@
         h3{margin-top:42px;margin-bottom:8px;}
         h4{margin-left:24px;margin-right:24px;}
         #twitter{line-height:20px;vertical-align:top;text-align:right;font-style:italic;color:#333;margin-top:24px;font-size:14px;}
+        .icon-logo  {
+              background: url("/bashblog/icon.svg") no-repeat;
+              background-size: 1em 1em;
+              padding-left: 2em;
+        }
