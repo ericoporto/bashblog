@@ -902,7 +902,7 @@ create_includes() {
         echo '<meta name="viewport" content="width=device-width, initial-scale=1.0" />'
         echo '<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>'
         echo '<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>'
-        echo '<script src="https://cdnjs.cloudflare.com/ajax.libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>'
+        echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>'
         echo '<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel ="stylesheet" type="text/css">'
         printf '<link rel="stylesheet" href="%s" type="text/css" />\n' "${css_include[@]}"
         if [[ -z $global_feedburner ]]; then
