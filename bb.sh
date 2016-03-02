@@ -904,7 +904,6 @@ create_includes() {
         echo '<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>'
         echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>'
         echo '<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel ="stylesheet" type="text/css">'
-        echo '<script src="http://ericoporto.github.io/bashblog/blog.js"></script>'
         printf '<link rel="stylesheet" href="%s" type="text/css" />\n' "${css_include[@]}"
         if [[ -z $global_feedburner ]]; then
             echo "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"$template_subscribe_browser_button\" href=\"$blog_feed\" />"
@@ -920,6 +919,8 @@ create_includes() {
         protected_mail=${protected_mail//./&#46;}
         echo "<div id=\"footer\">$global_license <a href=\"$global_author_url\">$global_author</a> &mdash; <a href=\"mailto:$protected_mail\">$protected_mail</a><br/>"
         echo 'Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>'
+        echo '<script src="http://ericoporto.github.io/bashblog/blog.js"></script>'
+
         } >> ".footer.html"
     fi
 }
