@@ -900,6 +900,7 @@ create_includes() {
         echo '<html xmlns="http://www.w3.org/1999/xhtml"><head>'
         echo '<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />'
         echo '<meta name="viewport" content="width=device-width, initial-scale=1.0" />'
+        echo '<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel ="stylesheet" type="text/css">'
         printf '<link rel="stylesheet" href="%s" type="text/css" />\n' "${css_include[@]}"
         if [[ -z $global_feedburner ]]; then
             echo "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"$template_subscribe_browser_button\" href=\"$blog_feed\" />"
@@ -951,7 +952,7 @@ create_css() {
     if [[ -f ../style.css ]] && [[ ! -f main.css ]]; then
         ln -s "../style.css" "main.css" 
     elif [[ ! -f main.css ]]; then
-        echo 'body{font-family:Georgia,"Times New Roman",Times,serif;margin:0;padding:0;background-color:#F3F3F3;}
+        echo 'body{font-family:"PT Sans", sans-serif;margin:0;padding:0;background-color:#F3F3F3;}
         #divbodyholder{padding:5px;background-color:#DDD;width:100%;max-width:874px;margin:24px auto;}
         #divbody{border:solid 1px #ccc;background-color:#fff;padding:0px 48px 24px 48px;top:0;}
         .headerholder{background-color:#f9f9f9;border-top:solid 1px #ccc;border-left:solid 1px #ccc;border-right:solid 1px #ccc;}
