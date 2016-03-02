@@ -904,6 +904,7 @@ create_includes() {
         echo '<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>'
         echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>'
         echo '<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel ="stylesheet" type="text/css">'
+        echo '<link href="https://fonts.googleapis.com/css?family=Arvo" rel ="stylesheet" type="text/css">'
         printf '<link rel="stylesheet" href="%s" type="text/css" />\n' "${css_include[@]}"
         if [[ -z $global_feedburner ]]; then
             echo "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"$template_subscribe_browser_button\" href=\"$blog_feed\" />"
@@ -944,8 +945,8 @@ create_css() {
         #all_posts{margin-top:24px;text-align:center;}
         .subtitle{font-size:small;margin:12px 0px;}
         .content p{margin-left:24px;margin-right:24px;}
-        h1{margin-bottom:12px !important;}
-        #description{font-size:large;margin-bottom:12px;}
+        h1{margin-bottom:12px !important; font-family: "Arvo", serif;}
+        #description{font-size:large;margin-bottom:12px; font-family: "Arvo", serif;}
         h3{margin-top:42px;margin-bottom:8px;}
         h4{margin-left:24px;margin-right:24px;}
         #twitter{line-height:20px;vertical-align:top;text-align:right;font-style:italic;color:#333;margin-top:24px;font-size:14px;}' > blog.css
