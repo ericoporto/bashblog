@@ -2,9 +2,48 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Command Line Erico</title><link>http://ericoporto.github.io/bashblog/index.html</link>
 <description>This is where I post things, from command line</description><language>en</language>
-<lastBuildDate>Wed, 02 Mar 2016 00:42:11 -0300</lastBuildDate>
-<pubDate>Wed, 02 Mar 2016 00:42:11 -0300</pubDate>
+<lastBuildDate>Wed, 02 Mar 2016 22:00:56 -0300</lastBuildDate>
+<pubDate>Wed, 02 Mar 2016 22:00:56 -0300</pubDate>
 <atom:link href="http://ericoporto.github.io/bashblog/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+How to configure keyboard on Crunchbang
+</title><description><![CDATA[
+
+<p>So this blog is written from my Old EEEPC 701 with 4G SSD. 
+I used to run a exotic Gentoo until I've been away from it for 4 months and 
+forget how to use it. So I've tried some distros and all and really like Crunchbang!</p>
+
+<p>But it ended, so now I'm using whatever I can use until everything require or too much maintenance
+or too much everything. I like this netbook, it was donated to me and I like to keep using it.</p>
+
+<p>Enough, let's get to the keyboard part. Basically you need to edit the keyboard file:</p>
+
+<pre><code>sudo nano /etc/default/keyboard
+</code></pre>
+
+<p>And if your keyboard is us intl, modify the file like this:</p>
+
+<pre><code># KEYBOARD CONFIGURATION FILE
+
+# Consult the keyboard(5) manual page.
+
+XKBMODEL="pc105"
+XKBLAYOUT="us"
+XKBVARIANT="intl"
+XKBOPTIONS=""
+
+BACKSPACE="guess"
+</code></pre>
+
+<p>Then restart and everything should work! 
+This assumes you have the package <code>keyboard-configuration</code> installed.</p>
+
+<p>Tags: <a href='tag_troubleshooting.html'>troubleshooting</a></p>
+<!-- text end -->
+]]></description><link>http://ericoporto.github.io/bashblog/how-to-configure-keyboard-on-crunchbang.html</link>
+<guid>http://ericoporto.github.io/bashblog/./how-to-configure-keyboard-on-crunchbang.html</guid>
+<dc:creator>Erico Porto</dc:creator>
+<pubDate>Wed, 02 Mar 2016 22:00:54 -0300</pubDate></item>
 <item><title>
 Cool Command Line Tools
 </title><description><![CDATA[
