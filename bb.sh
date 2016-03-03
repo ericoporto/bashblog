@@ -890,7 +890,7 @@ make_rss() {
 # generate headers, footers, etc
 create_includes() {
     {
-        echo "<h1 class=\"nomargin\"><a class=\"ablack\" href=\"$global_url/$index_file\">$global_title</a></h1>" 
+        echo "<h1 class=\"nomargin icon-logo\"><a class=\"ablack\" href=\"$global_url/$index_file\">$global_title</a></h1>" 
         echo "<div id=\"description\">$global_description</div>"
     } > ".title.html"
 
@@ -900,6 +900,11 @@ create_includes() {
         echo '<html xmlns="http://www.w3.org/1999/xhtml"><head>'
         echo '<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />'
         echo '<meta name="viewport" content="width=device-width, initial-scale=1.0" />'
+        echo '<script src="//code.jquery.com/jquery-1.12.0.min.js"></script>'
+        echo '<script src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>'
+        echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script>'
+        echo '<link href="https://fonts.googleapis.com/css?family=PT+Sans" rel ="stylesheet" type="text/css">'
+        echo '<link href="https://fonts.googleapis.com/css?family=Arvo" rel ="stylesheet" type="text/css">'
         printf '<link rel="stylesheet" href="%s" type="text/css" />\n' "${css_include[@]}"
         if [[ -z $global_feedburner ]]; then
             echo "<link rel=\"alternate\" type=\"application/rss+xml\" title=\"$template_subscribe_browser_button\" href=\"$blog_feed\" />"
@@ -915,6 +920,8 @@ create_includes() {
         protected_mail=${protected_mail//./&#46;}
         echo "<div id=\"footer\">$global_license <a href=\"$global_author_url\">$global_author</a> &mdash; <a href=\"mailto:$protected_mail\">$protected_mail</a><br/>"
         echo 'Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>'
+        echo '<script src="http://ericoporto.github.io/bashblog/blog.js"></script>'
+
         } >> ".footer.html"
     fi
 }
@@ -938,11 +945,16 @@ create_css() {
         #all_posts{margin-top:24px;text-align:center;}
         .subtitle{font-size:small;margin:12px 0px;}
         .content p{margin-left:24px;margin-right:24px;}
-        h1{margin-bottom:12px !important;}
-        #description{font-size:large;margin-bottom:12px;}
+        h1{margin-bottom:12px !important; font-family: "Arvo", serif;}
+        #description{font-size:large;margin-bottom:12px; font-family: "Arvo", serif;}
         h3{margin-top:42px;margin-bottom:8px;}
         h4{margin-left:24px;margin-right:24px;}
-        #twitter{line-height:20px;vertical-align:top;text-align:right;font-style:italic;color:#333;margin-top:24px;font-size:14px;}' > blog.css
+        #twitter{line-height:20px;vertical-align:top;text-align:right;font-style:italic;color:#333;margin-top:24px;font-size:14px;}
+        .icon-logo {
+             background: url("/bashblog/icon.svg") no repeat;
+             background-size: 1em 1em;
+             padding-left: 2em;
+        }' > blog.css
     fi
 
     # If there is a style.css from the parent page (i.e. some landing page)
@@ -951,10 +963,10 @@ create_css() {
     if [[ -f ../style.css ]] && [[ ! -f main.css ]]; then
         ln -s "../style.css" "main.css" 
     elif [[ ! -f main.css ]]; then
-        echo 'body{font-family:Georgia,"Times New Roman",Times,serif;margin:0;padding:0;background-color:#F3F3F3;}
-        #divbodyholder{padding:5px;background-color:#DDD;width:100%;max-width:874px;margin:24px auto;}
-        #divbody{border:solid 1px #ccc;background-color:#fff;padding:0px 48px 24px 48px;top:0;}
-        .headerholder{background-color:#f9f9f9;border-top:solid 1px #ccc;border-left:solid 1px #ccc;border-right:solid 1px #ccc;}
+        echo 'body{font-family:"PT Sans", sans-serif;margin:0;padding:0;background-color:#F3F3F3;}
+        #divbodyholder{padding:5px;background-color:rgba(216,216,216, .7);width:100%;max-width:874px;margin:24px auto;}
+        #divbody{border:solid 1px #ccc;background-color:rgba(255,255,255, .7);padding:0px 48px 24px 48px;top:0;}
+        .headerholder{background-color:rgba(255,255,255, .9);border-top:solid 1px #ccc;border-left:solid 1px #ccc;border-right:solid 1px #ccc;}
         .header{width:100%;max-width:800px;margin:0px auto;padding-top:24px;padding-bottom:8px;}
         .content{margin-bottom:5%;}
         .nomargin{margin:0;}
