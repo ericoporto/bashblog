@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Command Line Erico</title><link>http://ericoporto.github.io/bashblog/index.html</link>
 <description>This is where I post things, from command line</description><language>en</language>
-<lastBuildDate>Wed, 16 Mar 2016 22:22:28 -0300</lastBuildDate>
-<pubDate>Wed, 16 Mar 2016 22:22:28 -0300</pubDate>
+<lastBuildDate>Wed, 16 Mar 2016 22:24:44 -0300</lastBuildDate>
+<pubDate>Wed, 16 Mar 2016 22:24:44 -0300</pubDate>
 <atom:link href="http://ericoporto.github.io/bashblog/feed.rss" rel="self" type="application/rss+xml" />
 <item><title>
 Having fun with a home server
@@ -27,11 +27,9 @@ Plex for video streaming, mpd for audio streaming (and also playing audio on it 
 
 <p>The server is 3 days old, so I will update more on this in the future. If you want to see my Twitter
 bot, it's available, along with a nice install script and guide, on 
-https://github.com/ericoporto/Chove-Agora</p>
+<a href="https://github.com/ericoporto/Chove-Agora">Chove Agora github page</a>.</p>
 
 <p>Tags: <a href='tag_home-server.html'>home-server</a></p>
-
-
 <!-- text end -->
 ]]></description><link>http://ericoporto.github.io/bashblog/having-fun-with-a-home-server.html</link>
 <guid>http://ericoporto.github.io/bashblog/./having-fun-with-a-home-server.html</guid>
