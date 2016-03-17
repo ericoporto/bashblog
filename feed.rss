@@ -2,8 +2,8 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Command Line Erico</title><link>http://ericoporto.github.io/bashblog/index.html</link>
 <description>This is where I post things, from command line</description><language>en</language>
-<lastBuildDate>Wed, 16 Mar 2016 22:10:16 -0300</lastBuildDate>
-<pubDate>Wed, 16 Mar 2016 22:10:16 -0300</pubDate>
+<lastBuildDate>Wed, 16 Mar 2016 22:18:02 -0300</lastBuildDate>
+<pubDate>Wed, 16 Mar 2016 22:18:02 -0300</pubDate>
 <atom:link href="http://ericoporto.github.io/bashblog/feed.rss" rel="self" type="application/rss+xml" />
 <item><title>
 Having fun with a home server
@@ -30,11 +30,12 @@ bot, it's available, along with a nice install script and guide, on
 https://github.com/ericoporto/Chove-Agora</p>
 
 <p>Tags: <a href='tag_home-server.html'>home-server</a></p>
+
 <!-- text end -->
 ]]></description><link>http://ericoporto.github.io/bashblog/having-fun-with-a-home-server.html</link>
 <guid>http://ericoporto.github.io/bashblog/./having-fun-with-a-home-server.html</guid>
 <dc:creator>Erico Porto</dc:creator>
-<pubDate>Wed, 16 Mar 2016 22:10:13 -0300</pubDate></item>
+<pubDate>Wed, 16 Mar 2016 22:10:00 -0300</pubDate></item>
 <item><title>
 Using Pandoc as a Markdown to Docx converter
 </title><description><![CDATA[
@@ -61,11 +62,12 @@ in action below: </p>
 <p>If you need help writing markdown, <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">here is a cheatsheet</a>!</p>
 
 <p>Tags: <a href='tag_command-line-tools.html'>command-line-tools</a></p>
+
 <!-- text end -->
 ]]></description><link>http://ericoporto.github.io/bashblog/using-pandoc-as-a-markdown-to-docx-converter.html</link>
 <guid>http://ericoporto.github.io/bashblog/./using-pandoc-as-a-markdown-to-docx-converter.html</guid>
 <dc:creator>Erico Porto</dc:creator>
-<pubDate>Thu, 03 Mar 2016 22:00:11 -0300</pubDate></item>
+<pubDate>Thu, 03 Mar 2016 22:00:00 -0300</pubDate></item>
 <item><title>
 How to configure keyboard on Crunchbang
 </title><description><![CDATA[
@@ -100,11 +102,12 @@ BACKSPACE="guess"
 This assumes you have the package <code>keyboard-configuration</code> installed.</p>
 
 <p>Tags: <a href='tag_troubleshooting.html'>troubleshooting</a></p>
+
 <!-- text end -->
 ]]></description><link>http://ericoporto.github.io/bashblog/how-to-configure-keyboard-on-crunchbang.html</link>
 <guid>http://ericoporto.github.io/bashblog/./how-to-configure-keyboard-on-crunchbang.html</guid>
 <dc:creator>Erico Porto</dc:creator>
-<pubDate>Wed, 02 Mar 2016 22:00:54 -0300</pubDate></item>
+<pubDate>Wed, 02 Mar 2016 22:00:00 -0300</pubDate></item>
 <item><title>
 Cool Command Line Tools
 </title><description><![CDATA[
@@ -140,6 +143,7 @@ It's really good for finding help using intuitive commands.</p>
 
 
 
+
 <!-- text end -->
 ]]></description><link>http://ericoporto.github.io/bashblog/cool-command-line-tools.html</link>
 <guid>http://ericoporto.github.io/bashblog/./cool-command-line-tools.html</guid>
@@ -152,6 +156,7 @@ Hello World
 <p>This is a test post, the first post from the <strong>bashblog</strong> script!</p>
 
 <p>Tags: <a href='tag_hello-world.html'>hello-world</a></p>
+
 
 
 

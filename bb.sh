@@ -920,7 +920,7 @@ create_includes() {
         protected_mail=${protected_mail//./&#46;}
         echo "<div id=\"footer\">$global_license <a href=\"$global_author_url\">$global_author</a> &mdash; <a href=\"mailto:$protected_mail\">$protected_mail</a><br/>"
         echo 'Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>'
-        echo '<script src="http://ericoporto.github.io/bashblog/blog.js"></script>'
+        echo '<script src="https://ericoporto.github.io/bashblog/blog.js"></script>'
 
         } >> ".footer.html"
     fi
