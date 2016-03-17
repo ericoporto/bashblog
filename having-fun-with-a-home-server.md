@@ -18,6 +18,6 @@ Plex for video streaming, mpd for audio streaming (and also playing audio on it 
 
 The server is 3 days old, so I will update more on this in the future. If you want to see my Twitter
 bot, it's available, along with a nice install script and guide, on 
-https://github.com/ericoporto/Chove-Agora
+[Chove Agora github page](https://github.com/ericoporto/Chove-Agora).
 
 Tags: home-server
