@@ -19,6 +19,63 @@
 <div id="description">This is where I post things, from command line</div>
 </div></div></div>
 <div id="divbody"><div class="content">
+<h3><a class="ablack" href="how-to-fork-your-own-repository-on-github.html">
+How to fork your own repository on Github
+</a></h3>
+<div class="subtitle">June 18, 2016 &mdash; 
+Erico Porto</div>
+<!-- text begin -->
+
+<p>Recently I had to fork my own repository on Github and looked through the web.
+I ended up taking the solution from a comment in a website that suggested a much complex approach.</p>
+
+<ol>
+<li><p>create a new repository in Github, don't add a readme or anything.</p></li>
+<li><p>clone it on your computer</p></li>
+<li><p>add the original repository (the one you want to fork) as upstream source.</p>
+
+<p><code>git remote add upstream [url]</code></p></li>
+<li><p>fetch and merge upstream.</p>
+
+<p><code>git fetch upstream &amp; git merge upstream/master</code></p></li>
+</ol>
+
+<p>Thanks to Mark Marijnissen.</p>
+
+<p>Tags: <a href='tag_github.html'>github</a></p>
+<!-- text end -->
+<h3><a class="ablack" href="using-pandoc-as-a-markdown-to-docx-converter.html">
+Using Pandoc as a Markdown to Docx converter
+</a></h3>
+<div class="subtitle">March 03, 2016 &mdash; 
+Erico Porto</div>
+<!-- text begin -->
+
+<p>So, I don't really like Word. But it's nearly unavoidable, 
+especially in office environment (see what I did here?).</p>
+
+<p>Word has some good things, it can be read and edited by most
+people and can be easily converted to Kindle format. </p>
+
+<p>So the command line:</p>
+
+<pre><code>pandoc -o output.docx -f markdown -t docx input.md
+</code></pre>
+
+<p>Tadah! And if you are in Windows right now, one good thing is
+that you can run pandoc without installing - doesn't require being
+admin! <a href="
+https://gist.github.com/ericoporto/ccf9547d9e4d0786113c">Also I've made a <code>.bat</code> for making this easier in Windows</a>. The bat
+in action below: </p>
+
+<p><img src="https://cloud.githubusercontent.com/assets/2244442/13187576/16cd68bc-d733-11e5-8629-802042f7bda6.gif" alt="drag and drop" title="" /></p>
+
+<p>If you need help writing markdown, <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">here is a cheatsheet</a>!</p>
+
+<p>Tags: <a href='tag_command-line-tools.html'>command-line-tools</a></p>
+
+
+<!-- text end -->
 <h3><a class="ablack" href="downloading-subtitles-by-the-command-line.html">
 Downloading subtitles by the command line
 </a></h3>
@@ -79,35 +136,24 @@ bot, it's available, along with a nice install script and guide, on
 
 <p>Tags: <a href='tag_home-server.html'>home-server</a></p>
 <!-- text end -->
-<h3><a class="ablack" href="using-pandoc-as-a-markdown-to-docx-converter.html">
-Using Pandoc as a Markdown to Docx converter
+<h3><a class="ablack" href="hello-world.html">
+Hello World
 </a></h3>
-<div class="subtitle">March 03, 2016 &mdash; 
+<div class="subtitle">February 29, 2016 &mdash; 
 Erico Porto</div>
 <!-- text begin -->
 
-<p>So, I don't really like Word. But it's nearly unavoidable, 
-especially in office environment (see what I did here?).</p>
+<p>This is a test post, the first post from the <strong>bashblog</strong> script!</p>
 
-<p>Word has some good things, it can be read and edited by most
-people and can be easily converted to Kindle format. </p>
+<p>Tags: <a href='tag_hello-world.html'>hello-world</a></p>
 
-<p>So the command line:</p>
 
-<pre><code>pandoc -o output.docx -f markdown -t docx input.md
-</code></pre>
 
-<p>Tadah! And if you are in Windows right now, one good thing is
-that you can run pandoc without installing - doesn't require being
-admin! <a href="
-https://gist.github.com/ericoporto/ccf9547d9e4d0786113c">Also I've made a <code>.bat</code> for making this easier in Windows</a>. The bat
-in action below: </p>
 
-<p><img src="https://cloud.githubusercontent.com/assets/2244442/13187576/16cd68bc-d733-11e5-8629-802042f7bda6.gif" alt="drag and drop" title="" /></p>
 
-<p>If you need help writing markdown, <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">here is a cheatsheet</a>!</p>
 
-<p>Tags: <a href='tag_command-line-tools.html'>command-line-tools</a></p>
+
+
 
 
 <!-- text end -->
@@ -181,27 +227,6 @@ It's really good for finding help using intuitive commands.</p>
 <p>And that's it for today!</p>
 
 <p>Tags: <a href='tag_command-line-tools.html'>command-line-tools</a></p>
-
-
-
-
-
-
-
-
-
-
-<!-- text end -->
-<h3><a class="ablack" href="hello-world.html">
-Hello World
-</a></h3>
-<div class="subtitle">February 29, 2016 &mdash; 
-Erico Porto</div>
-<!-- text begin -->
-
-<p>This is a test post, the first post from the <strong>bashblog</strong> script!</p>
-
-<p>Tags: <a href='tag_hello-world.html'>hello-world</a></p>
 
 
 

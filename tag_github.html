@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="main.css" type="text/css" />
 <link rel="stylesheet" href="blog.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="Subscribe to this page..." href="feed.rss" />
-<title>Command Line Erico &mdash; All tags</title>
+<title>Command Line Erico &mdash; Posts tagged "github"</title>
 </head><body>
 <div id="divbodyholder">
 <div class="headerholder"><div class="header">
@@ -19,15 +19,31 @@
 <div id="description">This is where I post things, from command line</div>
 </div></div></div>
 <div id="divbody"><div class="content">
-<h3>All tags</h3>
-<ul>
-<li><a href="tag_command-line-tools.html">command-line-tools</a> &mdash; 3 posts</li>
-<li><a href="tag_github.html">github</a> &mdash; 1 post</li>
-<li><a href="tag_hello-world.html">hello-world</a> &mdash; 1 post</li>
-<li><a href="tag_home-server.html">home-server</a> &mdash; 1 post</li>
-<li><a href="tag_troubleshooting.html">troubleshooting</a> &mdash; 1 post</li>
-</ul>
-<div id="all_posts"><a href="./index.html">Back to the index page</a></div>
+<h3><a class="ablack" href="how-to-fork-your-own-repository-on-github.html">
+How to fork your own repository on Github
+</a></h3>
+<div class="subtitle">June 18, 2016 &mdash; 
+Erico Porto</div>
+<!-- text begin -->
+
+<p>Recently I had to fork my own repository on Github and looked through the web.
+I ended up taking the solution from a comment in a website that suggested a much complex approach.</p>
+
+<ol>
+<li><p>create a new repository in Github, don't add a readme or anything.</p></li>
+<li><p>clone it on your computer</p></li>
+<li><p>add the original repository (the one you want to fork) as upstream source.</p>
+
+<p><code>git remote add upstream [url]</code></p></li>
+<li><p>fetch and merge upstream.</p>
+
+<p><code>git fetch upstream &amp; git merge upstream/master</code></p></li>
+</ol>
+
+<p>Thanks to Mark Marijnissen.</p>
+
+<p>Tags: <a href='tag_github.html'>github</a></p>
+<!-- text end -->
 </div>
 <div id="footer">CC by-nc-nd <a href="http://ericoporto.github.io">Erico Porto</a> &mdash; <a href="mailto:no_email_yet&#64;ericoporto&#46;com">no_email_yet&#64;ericoporto&#46;com</a><br/>
 Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
