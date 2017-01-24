@@ -19,30 +19,37 @@
 <div id="description">This is where I post things, from command line</div>
 </div></div></div>
 <div id="divbody"><div class="content">
-<h3><a class="ablack" href="how-to-fork-your-own-repository-on-github.html">
-How to fork your own repository on Github
+<h3><a class="ablack" href="on-history-and-vim.html">
+On History and VIM
 </a></h3>
-<div class="subtitle">June 18, 2016 &mdash; 
+<div class="subtitle">January 24, 2017 &mdash; 
 Erico Porto</div>
 <!-- text begin -->
 
-<p>Recently I had to fork my own repository on Github and looked through the web.
-I ended up taking the solution from a comment in a website that suggested a much complex approach.</p>
+<p>The command line is an effective way of getting things done. 
+One of the things I like the most is how obvious are the tasks
+that deserves being automated by just running the <code>history</code> command
+and checking what you do most. </p>
 
-<ol>
-<li><p>create a new repository in Github, don't add a readme or anything.</p></li>
-<li><p>clone it on your computer</p></li>
-<li><p>add the original repository (the one you want to fork) as upstream source.</p>
+<p>I did some adjustments in my history, like making it twice as big as
+default settings in Ubuntu. I operate the history a lot, mostly with 
+<code>ctrl+r</code> in bash, and then I can use my brain to remember other things. 
+When I am lazy I throw some <code>history | grep command I don't remember parameters</code>, 
+<code>pandoc</code> and <code>tar</code> are good examples. Some git magic I usually anotate 
+as a gist in github since I have a haystack of git commands in my 
+history.</p>
 
-<p><code>git remote add upstream [url]</code></p></li>
-<li><p>fetch and merge upstream.</p>
+<p>The thing about history is that once you deal with a lot, you
+eventually will fall into having carefully written bash scripts that
+make your work easier - like publishing a python lib to Python Package 
+Index.</p>
 
-<p><code>git fetch upstream &amp; git merge upstream/master</code></p></li>
-</ol>
+<p>And while you are at the command line, I really recommend you to learn
+<strong>vim</strong>, it's an awesome text editor that can be extended with many plugins.
+My favorite right now is ZenRoom2, that can be called by typing <code>:Goyo</code>,
+it will give you a confortable place to write texts distraction free.</p>
 
-<p>Thanks to Mark Marijnissen.</p>
-
-<p>Tags: <a href='tag_github.html'>github</a></p>
+<p>Tags: <a href='tag_VIM.html'>VIM</a>, <a href='tag_command-line-tools.html'>command-line-tools</a></p>
 <!-- text end -->
 <h3><a class="ablack" href="using-pandoc-as-a-markdown-to-docx-converter.html">
 Using Pandoc as a Markdown to Docx converter
@@ -73,6 +80,47 @@ in action below: </p>
 <p>If you need help writing markdown, <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet">here is a cheatsheet</a>!</p>
 
 <p>Tags: <a href='tag_command-line-tools.html'>command-line-tools</a></p>
+
+
+<!-- text end -->
+<h3><a class="ablack" href="cool-command-line-tools.html">
+Cool Command Line Tools
+</a></h3>
+<div class="subtitle">March 01, 2016 &mdash; 
+Erico Porto</div>
+<!-- text begin -->
+
+<p>So today I want to talk about the cool command line tools available today to make
+your life living in the terminal easier!</p>
+
+<h2>Nano</h2>
+
+<p>This is old, but if you need a fast and quick text editor for not too long texts, this is 
+what you want. For short texts, this is it!</p>
+
+<h2>Slap Editor</h2>
+
+<p>If you need to edit code, this is the closest to Sublime Text / Atom you will get on terminal.</p>
+
+<p>It requires nodejs and npm installed. But having then and a internet connection will lead us
+to the next one in this list...</p>
+
+<h2>how2</h2>
+
+<p>How2 is Google+Stackoverflow without needing to leave the confy place that is the terminal. 
+It's really good for finding help using intuitive commands.</p>
+
+<p>And that's it for today!</p>
+
+<p>Tags: <a href='tag_command-line-tools.html'>command-line-tools</a></p>
+
+
+
+
+
+
+
+
 
 
 <!-- text end -->
@@ -197,46 +245,30 @@ This assumes you have the package <code>keyboard-configuration</code> installed.
 
 
 <!-- text end -->
-<h3><a class="ablack" href="cool-command-line-tools.html">
-Cool Command Line Tools
+<h3><a class="ablack" href="how-to-fork-your-own-repository-on-github.html">
+How to fork your own repository on Github
 </a></h3>
-<div class="subtitle">March 01, 2016 &mdash; 
+<div class="subtitle">June 18, 2016 &mdash; 
 Erico Porto</div>
 <!-- text begin -->
 
-<p>So today I want to talk about the cool command line tools available today to make
-your life living in the terminal easier!</p>
+<p>Recently I had to fork my own repository on Github and looked through the web.
+I ended up taking the solution from a comment in a website that suggested a much complex approach.</p>
 
-<h2>Nano</h2>
+<ol>
+<li><p>create a new repository in Github, don't add a readme or anything.</p></li>
+<li><p>clone it on your computer</p></li>
+<li><p>add the original repository (the one you want to fork) as upstream source.</p>
 
-<p>This is old, but if you need a fast and quick text editor for not too long texts, this is 
-what you want. For short texts, this is it!</p>
+<p><code>git remote add upstream [url]</code></p></li>
+<li><p>fetch and merge upstream.</p>
 
-<h2>Slap Editor</h2>
+<p><code>git fetch upstream &amp; git merge upstream/master</code></p></li>
+</ol>
 
-<p>If you need to edit code, this is the closest to Sublime Text / Atom you will get on terminal.</p>
+<p>Thanks to Mark Marijnissen.</p>
 
-<p>It requires nodejs and npm installed. But having then and a internet connection will lead us
-to the next one in this list...</p>
-
-<h2>how2</h2>
-
-<p>How2 is Google+Stackoverflow without needing to leave the confy place that is the terminal. 
-It's really good for finding help using intuitive commands.</p>
-
-<p>And that's it for today!</p>
-
-<p>Tags: <a href='tag_command-line-tools.html'>command-line-tools</a></p>
-
-
-
-
-
-
-
-
-
-
+<p>Tags: <a href='tag_github.html'>github</a></p>
 <!-- text end -->
 <div id="all_posts"><a href="all_posts.html">View more posts</a> &mdash; <a href="all_tags.html">All tags</a> &mdash; <a href="feed.rss">Subscribe</a></div>
 </div>

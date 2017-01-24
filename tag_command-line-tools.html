@@ -19,36 +19,37 @@
 <div id="description">This is where I post things, from command line</div>
 </div></div></div>
 <div id="divbody"><div class="content">
-<h3><a class="ablack" href="downloading-subtitles-by-the-command-line.html">
-Downloading subtitles by the command line
+<h3><a class="ablack" href="on-history-and-vim.html">
+On History and VIM
 </a></h3>
-<div class="subtitle">March 17, 2016 &mdash; 
+<div class="subtitle">January 24, 2017 &mdash; 
 Erico Porto</div>
 <!-- text begin -->
 
-<p>Today I want to show you guys the awesome tool that's 
-<a href="https://github.com/Diaoul/subliminal">Subliminal, by Diaoul</a>. Subliminal allow you to download a
-subtitle for a downloaded series or movie by using the command line (did you bought Angry Video 
-Game Nerd or PHD Movie and was surprised it had no subtitles in your language?).</p>
+<p>The command line is an effective way of getting things done. 
+One of the things I like the most is how obvious are the tasks
+that deserves being automated by just running the <code>history</code> command
+and checking what you do most. </p>
 
-<p>First you have to install it. Assuming you have pip and python on your system:</p>
+<p>I did some adjustments in my history, like making it twice as big as
+default settings in Ubuntu. I operate the history a lot, mostly with 
+<code>ctrl+r</code> in bash, and then I can use my brain to remember other things. 
+When I am lazy I throw some <code>history | grep command I don't remember parameters</code>, 
+<code>pandoc</code> and <code>tar</code> are good examples. Some git magic I usually anotate 
+as a gist in github since I have a haystack of git commands in my 
+history.</p>
 
-<pre><code>sudo pip install -U subliminal
-</code></pre>
+<p>The thing about history is that once you deal with a lot, you
+eventually will fall into having carefully written bash scripts that
+make your work easier - like publishing a python lib to Python Package 
+Index.</p>
 
-<p>After the instalation, you can use the follow command from command line to download a 
-subtitle (I'm going to use brazilian portuguese):</p>
+<p>And while you are at the command line, I really recommend you to learn
+<strong>vim</strong>, it's an awesome text editor that can be extended with many plugins.
+My favorite right now is ZenRoom2, that can be called by typing <code>:Goyo</code>,
+it will give you a confortable place to write texts distraction free.</p>
 
-<pre><code>subliminal download -l pt-BR movie-filename.extension
-</code></pre>
-
-<p>And that's it! Use <code>-l en</code> for english subtitles. The software also has a Nautilus extension that
-gives cool right click subtitle download for movie files - you can check on the project's webpage
-on github.</p>
-
-<p>I just use the command line, right now trying to bake a script to automate subtitle downloading. </p>
-
-<p>Tags: <a href='tag_command-line-tools.html'>command-line-tools</a></p>
+<p>Tags: <a href='tag_VIM.html'>VIM</a>, <a href='tag_command-line-tools.html'>command-line-tools</a></p>
 <!-- text end -->
 <h3><a class="ablack" href="using-pandoc-as-a-markdown-to-docx-converter.html">
 Using Pandoc as a Markdown to Docx converter
@@ -122,6 +123,37 @@ It's really good for finding help using intuitive commands.</p>
 
 
 
+<!-- text end -->
+<h3><a class="ablack" href="downloading-subtitles-by-the-command-line.html">
+Downloading subtitles by the command line
+</a></h3>
+<div class="subtitle">March 17, 2016 &mdash; 
+Erico Porto</div>
+<!-- text begin -->
+
+<p>Today I want to show you guys the awesome tool that's 
+<a href="https://github.com/Diaoul/subliminal">Subliminal, by Diaoul</a>. Subliminal allow you to download a
+subtitle for a downloaded series or movie by using the command line (did you bought Angry Video 
+Game Nerd or PHD Movie and was surprised it had no subtitles in your language?).</p>
+
+<p>First you have to install it. Assuming you have pip and python on your system:</p>
+
+<pre><code>sudo pip install -U subliminal
+</code></pre>
+
+<p>After the instalation, you can use the follow command from command line to download a 
+subtitle (I'm going to use brazilian portuguese):</p>
+
+<pre><code>subliminal download -l pt-BR movie-filename.extension
+</code></pre>
+
+<p>And that's it! Use <code>-l en</code> for english subtitles. The software also has a Nautilus extension that
+gives cool right click subtitle download for movie files - you can check on the project's webpage
+on github.</p>
+
+<p>I just use the command line, right now trying to bake a script to automate subtitle downloading. </p>
+
+<p>Tags: <a href='tag_command-line-tools.html'>command-line-tools</a></p>
 <!-- text end -->
 </div>
 <div id="footer">CC by-nc-nd <a href="http://ericoporto.github.io">Erico Porto</a> &mdash; <a href="mailto:no_email_yet&#64;ericoporto&#46;com">no_email_yet&#64;ericoporto&#46;com</a><br/>
