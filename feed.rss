@@ -2,9 +2,42 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:dc="http://purl.org/dc/elements/1.1/">
 <channel><title>Command Line Erico</title><link>http://ericoporto.github.io/bashblog/index.html</link>
 <description>This is where I post things, from command line</description><language>en</language>
-<lastBuildDate>Tue, 24 Jan 2017 00:30:15 -0200</lastBuildDate>
-<pubDate>Tue, 24 Jan 2017 00:30:15 -0200</pubDate>
+<lastBuildDate>Sun, 25 Mar 2018 21:00:17 -0300</lastBuildDate>
+<pubDate>Sun, 25 Mar 2018 21:00:17 -0300</pubDate>
 <atom:link href="http://ericoporto.github.io/bashblog/feed.rss" rel="self" type="application/rss+xml" />
+<item><title>
+How to stream audio from Ubuntu to DLNA device
+</title><description><![CDATA[
+
+<p><img src="https://i.imgur.com/JKgUibW.png" alt="pulseaudio-dlna on ubuntu" title=""></p>
+
+<p>Today I wanted to stream the audio from my ubuntu 16.04 to a dlna device. I had to install from the git source instead of the ppa because I had a conflict with chardet package in my system. the error was <i>"error: chardet 2.3.0 is installed" but chardet<3.1.0,>=3.0.2 is required by set(['requests'])</i>.
+</p>
+
+<p>here are my commands to install <b>pulseaudio-dlna</b>:</p>
+
+<pre><code>cd ~
+pip install chardet
+mkdir pulseaudio-dlna
+cd pulseaudio-dlna/
+git clone git@github.com:masmu/pulseaudio-dlna.git
+virtualenv --system-site-packages .
+source bin/activate
+cd pulseaudio-dlna/
+pip install .
+pulseaudio-dlna &
+</code></pre>
+
+<p>You can create a script to start the pulseaudio-dlna when the computer starts. You can get more info about <a href="https://github.com/masmu/pulseaudio-dlna">pulseaudio-dlna in the repository</a>.  </p>
+
+<p>If you need a dlna device to test, you can install <a href="https://play.google.com/store/apps/details?id=com.bubblesoft.android.bubbleupnp&hl=en">Bubble UPNP</a> on your Android device and have it as a remote sound sink.</p>
+
+<p>Tags: <a href='tag_dlna.html'>dlna</a>, <a href='tag_pulseaudio.html'>pulseaudio</a>, <a href='tag_sound.html'>sound</a></p>
+<!-- text end -->
+]]></description><link>http://ericoporto.github.io/bashblog/how-to-stream-audio-from-ubuntu-to-dlna-device.html</link>
+<guid>http://ericoporto.github.io/bashblog/./how-to-stream-audio-from-ubuntu-to-dlna-device.html</guid>
+<dc:creator>Erico Porto</dc:creator>
+<pubDate>Sun, 25 Mar 2018 21:00:09 -0300</pubDate></item>
 <item><title>
 On History and VIM
 </title><description><![CDATA[
@@ -37,7 +70,7 @@ it will give you a confortable place to write texts distraction free.</p>
 ]]></description><link>http://ericoporto.github.io/bashblog/on-history-and-vim.html</link>
 <guid>http://ericoporto.github.io/bashblog/./on-history-and-vim.html</guid>
 <dc:creator>Erico Porto</dc:creator>
-<pubDate>Tue, 24 Jan 2017 00:30:12 -0200</pubDate></item>
+<pubDate>Sun, 25 Mar 2018 20:39:56 -0300</pubDate></item>
 <item><title>
 Using Pandoc as a Markdown to Docx converter
 </title><description><![CDATA[
@@ -70,7 +103,158 @@ in action below: </p>
 ]]></description><link>http://ericoporto.github.io/bashblog/using-pandoc-as-a-markdown-to-docx-converter.html</link>
 <guid>http://ericoporto.github.io/bashblog/./using-pandoc-as-a-markdown-to-docx-converter.html</guid>
 <dc:creator>Erico Porto</dc:creator>
-<pubDate>Tue, 24 Jan 2017 00:28:04 -0200</pubDate></item>
+<pubDate>Sun, 25 Mar 2018 20:39:56 -0300</pubDate></item>
+<item><title>
+Downloading subtitles by the command line
+</title><description><![CDATA[
+
+<p>Today I want to show you guys the awesome tool that's 
+<a href="https://github.com/Diaoul/subliminal">Subliminal, by Diaoul</a>. Subliminal allow you to download a
+subtitle for a downloaded series or movie by using the command line (did you bought Angry Video 
+Game Nerd or PHD Movie and was surprised it had no subtitles in your language?).</p>
+
+<p>First you have to install it. Assuming you have pip and python on your system:</p>
+
+<pre><code>sudo pip install -U subliminal
+</code></pre>
+
+<p>After the instalation, you can use the follow command from command line to download a 
+subtitle (I'm going to use brazilian portuguese):</p>
+
+<pre><code>subliminal download -l pt-BR movie-filename.extension
+</code></pre>
+
+<p>And that's it! Use <code>-l en</code> for english subtitles. The software also has a Nautilus extension that
+gives cool right click subtitle download for movie files - you can check on the project's webpage
+on github.</p>
+
+<p>I just use the command line, right now trying to bake a script to automate subtitle downloading. </p>
+
+<p>Tags: <a href='tag_command-line-tools.html'>command-line-tools</a></p>
+<!-- text end -->
+]]></description><link>http://ericoporto.github.io/bashblog/downloading-subtitles-by-the-command-line.html</link>
+<guid>http://ericoporto.github.io/bashblog/./downloading-subtitles-by-the-command-line.html</guid>
+<dc:creator>Erico Porto</dc:creator>
+<pubDate>Sun, 25 Mar 2018 20:39:56 -0300</pubDate></item>
+<item><title>
+Having fun with a home server
+</title><description><![CDATA[
+
+<p>Recently I decided to use a spare d525mw Intel board I had to build a small home server.
+This board has soldered, fanless, atom dual core processor soldered on it, I'm running it
+with 4GB RAM and an old Samsung 500GB HDD. </p>
+
+<p>For the OS, I decided to use Ubuntu Server 15.10. Installing was a bit of a challenge because I have
+no monitors and had disabled USB boot a long time ago, so my solution was to lend a monitor just 
+for the install proccess. In the meantime I learned about preseeding, which was fun and a good idea
+on how to install an OS on it in the future - the board has no hdmi.</p>
+
+<h2>Using a home server</h2>
+
+<p>So what good can a home server do? Well, right now, aside from using it as a learning tool I'm 
+using to run a Twitter Bot I made, Transmission for torrenting things (web controlled) and 
+Owncloud. Owncloud was a bit of pain to setup, but it's working well right now. I plan to install
+Plex for video streaming, mpd for audio streaming (and also playing audio on it as a radio).</p>
+
+<p>The server is 3 days old, so I will update more on this in the future. If you want to see my Twitter
+bot, it's available, along with a nice install script and guide, on 
+<a href="https://github.com/ericoporto/Chove-Agora">Chove Agora github page</a>.</p>
+
+<p>Tags: <a href='tag_home-server.html'>home-server</a></p>
+<!-- text end -->
+]]></description><link>http://ericoporto.github.io/bashblog/having-fun-with-a-home-server.html</link>
+<guid>http://ericoporto.github.io/bashblog/./having-fun-with-a-home-server.html</guid>
+<dc:creator>Erico Porto</dc:creator>
+<pubDate>Sun, 25 Mar 2018 20:39:56 -0300</pubDate></item>
+<item><title>
+Hello World
+</title><description><![CDATA[
+
+<p>This is a test post, the first post from the <strong>bashblog</strong> script!</p>
+
+<p>Tags: <a href='tag_hello-world.html'>hello-world</a></p>
+
+
+
+
+
+
+
+
+
+
+<!-- text end -->
+]]></description><link>http://ericoporto.github.io/bashblog/hello-world.html</link>
+<guid>http://ericoporto.github.io/bashblog/./hello-world.html</guid>
+<dc:creator>Erico Porto</dc:creator>
+<pubDate>Sun, 25 Mar 2018 20:39:56 -0300</pubDate></item>
+<item><title>
+How to configure keyboard on Crunchbang
+</title><description><![CDATA[
+
+<p>So this blog is written from my Old EEEPC 701 with 4G SSD. 
+I used to run a exotic Gentoo until I've been away from it for 4 months and 
+forget how to use it. So I've tried some distros and all and really like Crunchbang!</p>
+
+<p>But it ended, so now I'm using whatever I can use until everything require or too much maintenance
+or too much everything. I like this netbook, it was donated to me and I like to keep using it.</p>
+
+<p>Enough, let's get to the keyboard part. Basically you need to edit the keyboard file:</p>
+
+<pre><code>sudo nano /etc/default/keyboard
+</code></pre>
+
+<p>And if your keyboard is us intl, modify the file like this:</p>
+
+<pre><code># KEYBOARD CONFIGURATION FILE
+
+# Consult the keyboard(5) manual page.
+
+XKBMODEL="pc105"
+XKBLAYOUT="us"
+XKBVARIANT="intl"
+XKBOPTIONS=""
+
+BACKSPACE="guess"
+</code></pre>
+
+<p>Then restart and everything should work! 
+This assumes you have the package <code>keyboard-configuration</code> installed.</p>
+
+<p>Tags: <a href='tag_troubleshooting.html'>troubleshooting</a></p>
+
+
+<!-- text end -->
+]]></description><link>http://ericoporto.github.io/bashblog/how-to-configure-keyboard-on-crunchbang.html</link>
+<guid>http://ericoporto.github.io/bashblog/./how-to-configure-keyboard-on-crunchbang.html</guid>
+<dc:creator>Erico Porto</dc:creator>
+<pubDate>Sun, 25 Mar 2018 20:39:56 -0300</pubDate></item>
+<item><title>
+How to fork your own repository on Github
+</title><description><![CDATA[
+
+<p>Recently I had to fork my own repository on Github and looked through the web.
+I ended up taking the solution from a comment in a website that suggested a much complex approach.</p>
+
+<ol>
+<li><p>create a new repository in Github, don't add a readme or anything.</p></li>
+<li><p>clone it on your computer</p></li>
+<li><p>add the original repository (the one you want to fork) as upstream source.</p>
+
+<p><code>git remote add upstream [url]</code></p></li>
+<li><p>fetch and merge upstream.</p>
+
+<p><code>git fetch upstream &amp; git merge upstream/master</code></p></li>
+</ol>
+
+<p>Thanks to Mark Marijnissen.</p>
+
+<p>Tags: <a href='tag_github.html'>github</a></p>
+<!-- text end -->
+]]></description><link>http://ericoporto.github.io/bashblog/how-to-fork-your-own-repository-on-github.html</link>
+<guid>http://ericoporto.github.io/bashblog/./how-to-fork-your-own-repository-on-github.html</guid>
+<dc:creator>Erico Porto</dc:creator>
+<pubDate>Sun, 25 Mar 2018 20:39:56 -0300</pubDate></item>
 <item><title>
 Cool Command Line Tools
 </title><description><![CDATA[
@@ -112,156 +296,5 @@ It's really good for finding help using intuitive commands.</p>
 ]]></description><link>http://ericoporto.github.io/bashblog/cool-command-line-tools.html</link>
 <guid>http://ericoporto.github.io/bashblog/./cool-command-line-tools.html</guid>
 <dc:creator>Erico Porto</dc:creator>
-<pubDate>Tue, 24 Jan 2017 00:28:04 -0200</pubDate></item>
-<item><title>
-Downloading subtitles by the command line
-</title><description><![CDATA[
-
-<p>Today I want to show you guys the awesome tool that's 
-<a href="https://github.com/Diaoul/subliminal">Subliminal, by Diaoul</a>. Subliminal allow you to download a
-subtitle for a downloaded series or movie by using the command line (did you bought Angry Video 
-Game Nerd or PHD Movie and was surprised it had no subtitles in your language?).</p>
-
-<p>First you have to install it. Assuming you have pip and python on your system:</p>
-
-<pre><code>sudo pip install -U subliminal
-</code></pre>
-
-<p>After the instalation, you can use the follow command from command line to download a 
-subtitle (I'm going to use brazilian portuguese):</p>
-
-<pre><code>subliminal download -l pt-BR movie-filename.extension
-</code></pre>
-
-<p>And that's it! Use <code>-l en</code> for english subtitles. The software also has a Nautilus extension that
-gives cool right click subtitle download for movie files - you can check on the project's webpage
-on github.</p>
-
-<p>I just use the command line, right now trying to bake a script to automate subtitle downloading. </p>
-
-<p>Tags: <a href='tag_command-line-tools.html'>command-line-tools</a></p>
-<!-- text end -->
-]]></description><link>http://ericoporto.github.io/bashblog/downloading-subtitles-by-the-command-line.html</link>
-<guid>http://ericoporto.github.io/bashblog/./downloading-subtitles-by-the-command-line.html</guid>
-<dc:creator>Erico Porto</dc:creator>
-<pubDate>Tue, 24 Jan 2017 00:28:04 -0200</pubDate></item>
-<item><title>
-Having fun with a home server
-</title><description><![CDATA[
-
-<p>Recently I decided to use a spare d525mw Intel board I had to build a small home server.
-This board has soldered, fanless, atom dual core processor soldered on it, I'm running it
-with 4GB RAM and an old Samsung 500GB HDD. </p>
-
-<p>For the OS, I decided to use Ubuntu Server 15.10. Installing was a bit of a challenge because I have
-no monitors and had disabled USB boot a long time ago, so my solution was to lend a monitor just 
-for the install proccess. In the meantime I learned about preseeding, which was fun and a good idea
-on how to install an OS on it in the future - the board has no hdmi.</p>
-
-<h2>Using a home server</h2>
-
-<p>So what good can a home server do? Well, right now, aside from using it as a learning tool I'm 
-using to run a Twitter Bot I made, Transmission for torrenting things (web controlled) and 
-Owncloud. Owncloud was a bit of pain to setup, but it's working well right now. I plan to install
-Plex for video streaming, mpd for audio streaming (and also playing audio on it as a radio).</p>
-
-<p>The server is 3 days old, so I will update more on this in the future. If you want to see my Twitter
-bot, it's available, along with a nice install script and guide, on 
-<a href="https://github.com/ericoporto/Chove-Agora">Chove Agora github page</a>.</p>
-
-<p>Tags: <a href='tag_home-server.html'>home-server</a></p>
-<!-- text end -->
-]]></description><link>http://ericoporto.github.io/bashblog/having-fun-with-a-home-server.html</link>
-<guid>http://ericoporto.github.io/bashblog/./having-fun-with-a-home-server.html</guid>
-<dc:creator>Erico Porto</dc:creator>
-<pubDate>Tue, 24 Jan 2017 00:28:04 -0200</pubDate></item>
-<item><title>
-Hello World
-</title><description><![CDATA[
-
-<p>This is a test post, the first post from the <strong>bashblog</strong> script!</p>
-
-<p>Tags: <a href='tag_hello-world.html'>hello-world</a></p>
-
-
-
-
-
-
-
-
-
-
-<!-- text end -->
-]]></description><link>http://ericoporto.github.io/bashblog/hello-world.html</link>
-<guid>http://ericoporto.github.io/bashblog/./hello-world.html</guid>
-<dc:creator>Erico Porto</dc:creator>
-<pubDate>Tue, 24 Jan 2017 00:28:04 -0200</pubDate></item>
-<item><title>
-How to configure keyboard on Crunchbang
-</title><description><![CDATA[
-
-<p>So this blog is written from my Old EEEPC 701 with 4G SSD. 
-I used to run a exotic Gentoo until I've been away from it for 4 months and 
-forget how to use it. So I've tried some distros and all and really like Crunchbang!</p>
-
-<p>But it ended, so now I'm using whatever I can use until everything require or too much maintenance
-or too much everything. I like this netbook, it was donated to me and I like to keep using it.</p>
-
-<p>Enough, let's get to the keyboard part. Basically you need to edit the keyboard file:</p>
-
-<pre><code>sudo nano /etc/default/keyboard
-</code></pre>
-
-<p>And if your keyboard is us intl, modify the file like this:</p>
-
-<pre><code># KEYBOARD CONFIGURATION FILE
-
-# Consult the keyboard(5) manual page.
-
-XKBMODEL="pc105"
-XKBLAYOUT="us"
-XKBVARIANT="intl"
-XKBOPTIONS=""
-
-BACKSPACE="guess"
-</code></pre>
-
-<p>Then restart and everything should work! 
-This assumes you have the package <code>keyboard-configuration</code> installed.</p>
-
-<p>Tags: <a href='tag_troubleshooting.html'>troubleshooting</a></p>
-
-
-<!-- text end -->
-]]></description><link>http://ericoporto.github.io/bashblog/how-to-configure-keyboard-on-crunchbang.html</link>
-<guid>http://ericoporto.github.io/bashblog/./how-to-configure-keyboard-on-crunchbang.html</guid>
-<dc:creator>Erico Porto</dc:creator>
-<pubDate>Tue, 24 Jan 2017 00:28:04 -0200</pubDate></item>
-<item><title>
-How to fork your own repository on Github
-</title><description><![CDATA[
-
-<p>Recently I had to fork my own repository on Github and looked through the web.
-I ended up taking the solution from a comment in a website that suggested a much complex approach.</p>
-
-<ol>
-<li><p>create a new repository in Github, don't add a readme or anything.</p></li>
-<li><p>clone it on your computer</p></li>
-<li><p>add the original repository (the one you want to fork) as upstream source.</p>
-
-<p><code>git remote add upstream [url]</code></p></li>
-<li><p>fetch and merge upstream.</p>
-
-<p><code>git fetch upstream &amp; git merge upstream/master</code></p></li>
-</ol>
-
-<p>Thanks to Mark Marijnissen.</p>
-
-<p>Tags: <a href='tag_github.html'>github</a></p>
-<!-- text end -->
-]]></description><link>http://ericoporto.github.io/bashblog/how-to-fork-your-own-repository-on-github.html</link>
-<guid>http://ericoporto.github.io/bashblog/./how-to-fork-your-own-repository-on-github.html</guid>
-<dc:creator>Erico Porto</dc:creator>
-<pubDate>Tue, 24 Jan 2017 00:28:04 -0200</pubDate></item>
+<pubDate>Sun, 25 Mar 2018 20:39:56 -0300</pubDate></item>
 </channel></rss>

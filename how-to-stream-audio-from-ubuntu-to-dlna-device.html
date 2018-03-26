@@ -10,7 +10,7 @@
 <link rel="stylesheet" href="main.css" type="text/css" />
 <link rel="stylesheet" href="blog.css" type="text/css" />
 <link rel="alternate" type="application/rss+xml" title="Subscribe to this page..." href="feed.rss" />
-<title>Command Line Erico &mdash; All posts</title>
+<title>How to stream audio from Ubuntu to DLNA device</title>
 </head><body>
 <div id="divbodyholder">
 <div class="headerholder"><div class="header">
@@ -19,20 +19,40 @@
 <div id="description">This is where I post things, from command line</div>
 </div></div></div>
 <div id="divbody"><div class="content">
-<h3>All posts</h3>
-<h4 class='allposts_header'>March 2018</h4>
-<ul>
-<li><a href="./how-to-stream-audio-from-ubuntu-to-dlna-device.html">How to stream audio from Ubuntu to DLNA device</a> &mdash; March 25, 2018</li>
-<li><a href="./on-history-and-vim.html">On History and VIM</a> &mdash; March 25, 2018</li>
-<li><a href="./using-pandoc-as-a-markdown-to-docx-converter.html">Using Pandoc as a Markdown to Docx converter</a> &mdash; March 25, 2018</li>
-<li><a href="./downloading-subtitles-by-the-command-line.html">Downloading subtitles by the command line</a> &mdash; March 25, 2018</li>
-<li><a href="./having-fun-with-a-home-server.html">Having fun with a home server</a> &mdash; March 25, 2018</li>
-<li><a href="./hello-world.html">Hello World</a> &mdash; March 25, 2018</li>
-<li><a href="./how-to-configure-keyboard-on-crunchbang.html">How to configure keyboard on Crunchbang</a> &mdash; March 25, 2018</li>
-<li><a href="./how-to-fork-your-own-repository-on-github.html">How to fork your own repository on Github</a> &mdash; March 25, 2018</li>
-<li><a href="./cool-command-line-tools.html">Cool Command Line Tools</a> &mdash; March 25, 2018</li>
-</ul>
-<div id="all_posts"><a href="./index.html">Back to the index page</a></div>
+<!-- entry begin -->
+<h3><a class="ablack" href="how-to-stream-audio-from-ubuntu-to-dlna-device.html">
+How to stream audio from Ubuntu to DLNA device
+</a></h3>
+<div class="subtitle">March 25, 2018 &mdash; 
+Erico Porto</div>
+<!-- text begin -->
+
+<p><img src="https://i.imgur.com/JKgUibW.png" alt="pulseaudio-dlna on ubuntu" title=""></p>
+
+<p>Today I wanted to stream the audio from my ubuntu 16.04 to a dlna device. I had to install from the git source instead of the ppa because I had a conflict with chardet package in my system. the error was <i>"error: chardet 2.3.0 is installed" but chardet<3.1.0,>=3.0.2 is required by set(['requests'])</i>.
+</p>
+
+<p>here are my commands to install <b>pulseaudio-dlna</b>:</p>
+
+<pre><code>cd ~
+pip install chardet
+mkdir pulseaudio-dlna
+cd pulseaudio-dlna/
+git clone git@github.com:masmu/pulseaudio-dlna.git
+virtualenv --system-site-packages .
+source bin/activate
+cd pulseaudio-dlna/
+pip install .
+pulseaudio-dlna &
+</code></pre>
+
+<p>You can create a script to start the pulseaudio-dlna when the computer starts. You can get more info about <a href="https://github.com/masmu/pulseaudio-dlna">pulseaudio-dlna in the repository</a>.  </p>
+
+<p>If you need a dlna device to test, you can install <a href="https://play.google.com/store/apps/details?id=com.bubblesoft.android.bubbleupnp&hl=en">Bubble UPNP</a> on your Android device and have it as a remote sound sink.</p>
+
+<p>Tags: <a href='tag_dlna.html'>dlna</a>, <a href='tag_pulseaudio.html'>pulseaudio</a>, <a href='tag_sound.html'>sound</a></p>
+<!-- text end -->
+<!-- entry end -->
 </div>
 <div id="footer">CC by-nc-nd <a href="http://ericoporto.github.io">Erico Porto</a> &mdash; <a href="mailto:no_email_yet&#64;ericoporto&#46;com">no_email_yet&#64;ericoporto&#46;com</a><br/>
 Generated with <a href="https://github.com/cfenollosa/bashblog">bashblog</a>, a single bash script to easily create blogs like this one</div>
